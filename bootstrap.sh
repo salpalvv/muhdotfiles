@@ -4,6 +4,7 @@
 ln -s $HOME/muhdotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/muhdotfiles/.vim/ $HOME/.vim
 
+#need to distinguish between mac and linux
 # install installers
 #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #brew tap caskroom/cask
