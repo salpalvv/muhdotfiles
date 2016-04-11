@@ -5,6 +5,10 @@ set shiftwidth=2
 set expandtab
 let g:indent_guildes_start_level = 2
 
+set ignorecase
+set smartcase 
+set incsearch
+
 " pathogen
 if has('win32') || has('win64')
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
