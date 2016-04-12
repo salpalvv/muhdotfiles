@@ -1,2 +1,2 @@
-source ~/muhdotfiles/.profile
-source ~/muhdotfiles/.bashrc
+source ~/.profile
+source ~/.bashrc

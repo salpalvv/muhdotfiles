@@ -6,9 +6,9 @@ ln -sf ~/muhdotfiles/.vim/ ~/.vim
 
 ln -sf ~/muhdotfiles/.bashrc ~/.bashrc
 ln -sf ~/muhdotfiles/.bash_profile ~/.bash_profile
+ln -sf ~/muhdotfiles/.profile ~/.profile
 
 ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
-
 
 #need to distinguish between mac and linux
 # install installers
@@ -31,4 +31,4 @@ ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
 #brew cask install virtualbox
 #brew cask install vlc
 
-
+source ~/.bash_profile
