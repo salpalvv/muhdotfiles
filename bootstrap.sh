@@ -1,13 +1,15 @@
-
+#!/usr/bin/env bash
 
 # do some symlinking of dotfiles 
-ln -fsv "~/muhdotfiles/.vimrc" ~
-ln -fsv "~/muhdotfiles/.vim/" ~
+ln -sf ~/muhdotfiles/.vimrc ~/.vimrc
+ln -sf ~/muhdotfiles/.vim/ ~/.vim
 
-ln -fsv "~/muhdotfiles/.bashrc" ~
-ln -fsv "~/muhdotfiles/.bash_profile" ~
+ln -sf ~/muhdotfiles/.bashrc ~/.bashrc
+ln -sf ~/muhdotfiles/.bash_profile ~/.bash_profile
 
-ln -fsv "~/muhdotfiles/.gitconfig" ~
+ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
+
+
 #need to distinguish between mac and linux
 # install installers
 #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -28,4 +30,5 @@ ln -fsv "~/muhdotfiles/.gitconfig" ~
 #brew cask install google-chrome
 #brew cask install virtualbox
 #brew cask install vlc
+
 

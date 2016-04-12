@@ -1,4 +1,3 @@
-for DOTFILE in `find $HOME/muhdotfiles/system`
-do
-  [ -f “$DOTFILE” ] && source “$DOTFILE”
-done
+for file in ~/muhdotfiles/system/.{prompt,inputrc,exports,aliases,functions}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
