@@ -1,9 +1,13 @@
 
 
 # do some symlinking of dotfiles 
-ln -s $HOME/muhdotfiles/.vimrc $HOME/.vimrc
-ln -s $HOME/muhdotfiles/.vim/ $HOME/.vim
+ln -fsv "~/muhdotfiles/.vimrc" ~
+ln -fsv "~/muhdotfiles/.vim/" ~
 
+ln -fsv "~/muhdotfiles/.bashrc" ~
+ln -fsv "~/muhdotfiles/.bash_profile" ~
+
+ln -fsv "~/muhdotfiles/.gitconfig" ~
 #need to distinguish between mac and linux
 # install installers
 #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
