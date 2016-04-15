@@ -8,6 +8,9 @@ let g:indent_guildes_start_level = 2
 set ignorecase
 set smartcase 
 set incsearch
+set ruler 
+set shortmess+=I
+set autoread
 
 " pathogen
 if has('win32') || has('win64')

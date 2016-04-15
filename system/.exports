@@ -22,3 +22,6 @@ export CLICOLOR=1
 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
+
+export MANPAGER="less -X" # Don’t clear the screen after quitting a manual page
+

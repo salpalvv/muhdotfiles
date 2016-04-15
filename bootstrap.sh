@@ -25,8 +25,8 @@ ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
 #brew install git
 #brew install wget
 #brew install curl
+#brew install vim --override-system-vim
 
-#brew cask install dropbox
 #brew cask install google-chrome
 #brew cask install virtualbox
 #brew cask install vlc
