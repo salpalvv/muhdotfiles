@@ -11,6 +11,8 @@ set incsearch
 set ruler 
 set shortmess+=I
 set autoread
+set mouse=a
+set number
 
 " pathogen
 if has('win32') || has('win64')
