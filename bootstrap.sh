@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# do some symlinking of dotfiles 
+# do some symlinking of dotfiles {{{ 
+
 ln -sf ~/muhdotfiles/.vimrc ~/.vimrc
 ln -sf ~/muhdotfiles/.vim/ ~/.vim
 
@@ -10,51 +11,33 @@ ln -sf ~/muhdotfiles/.profile ~/.profile
 
 ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
 
-#need to distinguish between mac and linux
-# CentOS Specific {{{
+ln -sf ~/muhdotfiles/.tmux.conf ~/.tmux.conf
+
+# }}}
+
+#need to distinguish between MAC and LINUX 
+# CentOS specific {{{
 
 # yum install -y git vim wget curl 
 
-# tmux install {{{
+# libevent + tmux {{{
 
-# Install tmux on Centos release 6.5
-# http://superuser.com/questions/738829/attempting-to-install-tmux-on-centos-6-4-or-centos-6-5-fails-with-error-evbuff
+# pushd ~
 # 
-
-# READ THIS FIRST!!!
-# MAKE SURE YOU HAVE BUILD TOOLS/COMPILERS TO BUILD STUFF FROM SOURCES
-# yum groupinstall "Development Tools"
-
-
-# CD TO TEMPORARY DIRECTORY
-#cd /tmp/sources
-
-# INSTALL NCURSES DEVEL
-#yum -y install ncurses-devel
-
-# DOWNLOAD SOURCES FOR LIBEVENT AND MAKE AND INSTALL
-#### wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
-#curl -OL https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
-#tar -xvzf libevent-2.0.21-stable.tar.gz
-#cd libevent-2.0.21-stable
-#./configure
-#make
-#make install
-
-# DOWNLOAD SOURCES FOR TMUX AND MAKE AND INSTALL
-#### wget http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
-#curl -OL http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
-#tar -xvzf tmux-1.9a.tar.gz
-#cd tmux-1.9a
-#./configure
-#make
-#make install
-
-# SWITCH BACK TO REGULAR USER AND EDIT YOUR BASHRC (OR ZSH CONFIG)
-#echo export LD_LIBRARY_PATH=/usr/local/lib >> ~/.bash_profile
-#. ~/.bash_profile
-#### source ~/.bash_profile
-
+# yum install -y ncurses-devel
+# yum install -y gclibc-static
+# 
+# wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
+# tar xzvf libevent-2.0.22-stable.tar.gz
+# cd libevent-2.0.22-stable
+# ./configure && make && make install
+# 
+# wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
+# tar xzvf tmux-2.2.tar.gz
+# cd tmux-2.2
+# ./configure && make && make install
+# popd 
+# 
 # }}}
 
 # }}}
@@ -76,10 +59,12 @@ ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
 #brew install wget
 #brew install curl
 #brew install vim --override-system-vim
+#brew install tmux
 
 #brew cask install google-chrome
 #brew cask install virtualbox
 #brew cask install vlc
 
 # }}}
+
 source ~/.bash_profile
