@@ -44,8 +44,8 @@ syntax on
 
 " solarized 
 syntax enable
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>

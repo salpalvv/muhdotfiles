@@ -1,5 +1,5 @@
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR='vim'
 
 # Go envs 
 export PATH=$PATH:/usr/local/go/bin
@@ -9,8 +9,8 @@ export GOPATH=$HOME/go
 
 # History
 
-export HISTSIZE=32768;
-export HISTFILESIZE="${HISTSIZE}";
+export HISTSIZE=32768
+export HISTFILESIZE="${HISTSIZE}"
 export SAVEHIST=4096
 export HISTCONTROL=ignoredups:erasedups
 
