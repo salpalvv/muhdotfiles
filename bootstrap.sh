@@ -15,8 +15,9 @@ ln -sf ~/muhdotfiles/.tmux.conf ~/.tmux.conf
 
 # }}}
 
-#need to distinguish between MAC and LINUX 
-# CentOS specific {{{
+#need to distinguish between MAC, DEB, and RHEL family
+#OR just run ansible script. This sounds better
+# RHEL family specific {{{
 
 # yum install -y git vim wget curl 
 
@@ -93,4 +94,7 @@ ln -sf ~/muhdotfiles/.tmux.conf ~/.tmux.conf
 
 # }}}
 
+#Debian Family Specific {{{
+#
+#}}}
 source ~/.bash_profile
