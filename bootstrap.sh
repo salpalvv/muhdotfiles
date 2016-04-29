@@ -17,6 +17,8 @@ ln -sf ~/muhdotfiles/.tmux.conf ~/.tmux.conf
 
 #need to distinguish between MAC, DEB, and RHEL family
 #OR just run ansible script. This sounds better
+#now i need to just install ansible on each box depending on OS
+
 # RHEL family specific {{{
 
 # yum install -y git vim wget curl 
