@@ -1,5 +1,41 @@
 #!/usr/bin/env bash
 
+# install ansible based on os {{{
+
+# if redhat family {{{
+if [ -f /etc/redhat_release ]; then
+	# install ansible	
+	yum update -y python ruby
+	yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+	yum install -y python-setuptools python-yaml python-jinja2 python-paramiko python-crypto libselinux-python ansible
+	
+	ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+	cat ~/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+	chmod 600 /root/.ssh
+	chmod 700 /root/.ssh/authorized_keys
+	
+	chmod -x ~/ansible/hosts
+
+# }}}
+# if debian family {{{
+elif [ -f /etc/debian_version ]; then
+	# install ansible
+
+# }}}
+# if osx {{{
+#elif [ something]; then 
+	# install ansible
+
+fi
+# }}}
+
+# }}}
+
+# run the bootstrap playbook
+pushd ansible
+ansible-playbook bootstrap.yml
+popd
+
 # do some symlinking of dotfiles {{{ 
 
 ln -sf ~/muhdotfiles/.vimrc ~/.vimrc
@@ -21,11 +57,24 @@ ln -sf ~/muhdotfiles/.tmux.conf ~/.tmux.conf
 
 # RHEL family specific {{{
 
-# yum install -y git vim wget curl 
+# yum install -y git vim wget curl rsync nc 
 
 # golang setup
 
+# ansible setup {{{
 
+# yum update -y python ruby
+# yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+# yum install -y python-setuptools python-yaml python-jinja2 python-paramiko python-crypto libselinux-python ansible
+
+# ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+# cat ~/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+# chmod 600 /root/.ssh
+# chmod 700 /root/.ssh/authorized_keys
+
+# chmod -x ~/ansible/hosts
+
+# }}}
 # libevent + tmux {{{
 
 # pushd ~
