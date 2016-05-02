@@ -1,11 +1,12 @@
 " basic settings {{{ 
 
 " use two spaces for indentation
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-let g:indent_guildes_start_level = 2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+let g:indent_guides_start_level = 1
+let g:indent_guides_start_size = 2
 
 set ignorecase
 set smartcase
@@ -31,7 +32,7 @@ let mapleader=" "
 
 " pathogen {{{
 if has('win32') || has('win64')
-  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+	set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 call pathogen#infect()
 call pathogen#helptags()
@@ -44,7 +45,7 @@ syntax on
 
 " solarized 
 syntax enable
-" set background=dark
+set background=light
 " colorscheme solarized
 
 " NERDTree

@@ -3,3 +3,4 @@ for file in ~/muhdotfiles/system/.{prompt,inputrc,aliases,functions}; do
 done;
 
 # add bash specific exports here
+unset SSH_ASKPASS
