@@ -3,3 +3,6 @@
 	email = gth701m@gmail.com
 [color]
 	ui = true
+[alias]
+	s = status
+	a = !git add . && git s
