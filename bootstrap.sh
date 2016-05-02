@@ -20,12 +20,12 @@ if [ -f /etc/redhat_release ]; then
 # if debian family {{{
 elif [ -f /etc/debian_version ]; then
 	# install ansible
-
+	echo "debian"
 # }}}
 # if osx {{{
-#elif [ something]; then 
+elif [ $(uname) == 'FreeBSD' ]; then
 	# install ansible
-
+	echo "mac"
 fi
 # }}}
 
