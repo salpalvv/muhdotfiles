@@ -20,7 +20,3 @@ alias tat='tmux new-session -As $(basename "$PWD" | tr . -)'
 alias tmuxsrc="tmux source-file ~/.tmux.conf"
 # tmux kill all sessions
 alias tmuxkillall="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}" 
-
-#git
-alias s="status"
-alias a="add --all && git s" 
