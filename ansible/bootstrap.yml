@@ -1,9 +1,0 @@
----
--   hosts: local
-  
-    vars:
-  
-    roles:
-        - golang
-        - jenkins
-        - tmux

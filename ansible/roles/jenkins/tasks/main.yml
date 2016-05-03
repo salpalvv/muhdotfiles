@@ -1,9 +1,0 @@
----
-- include: setup-RedHat.yml
-  when: ansible_os_family == 'Redhat'
-       
-- include: setup-Debian.yml
-  when: ansible_os_family == 'Debian'
-
-- include: setup-Darwin.yml
-  when: ansible_os_family == 'Darwin'
