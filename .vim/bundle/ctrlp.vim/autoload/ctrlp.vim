@@ -432,6 +432,9 @@ fu! s:UserCmd(lscmd)
 		let lscmd = substitute(lscmd, '\v(^|\&\&\s*)\zscd (/d)@!', 'cd /d ', '')
 	en
 	let path = exists('*shellescape') ? shellescape(path) : path
+	if (has('win32') || has('win64')) && match(&shell, 'sh') != -1
+		let path = tr(path, '\', '/')
+	en
 	if has('patch-7.4-597') && !(has('win32') || has('win64'))
 		let g:ctrlp_allfiles = systemlist(printf(lscmd, path))
 	else
@@ -950,7 +953,7 @@ fu! s:MapSpecs()
 	if !( exists('s:smapped') && s:smapped == s:bufnr )
 		" Correct arrow keys in terminal
 		if ( has('termresponse') && v:termresponse =~ "\<ESC>" )
-			\ || &term =~? '\vxterm|<k?vt|gnome|screen|linux|ansi|tmux'
+			\ || &term =~? '\vxterm|<k?vt|gnome|screen|linux|ansi|tmux|st(-[-a-z0-9]*)?$'
 			for each in ['\A <up>','\B <down>','\C <right>','\D <left>']
 				exe s:lcmap.' <esc>['.each
 			endfo
@@ -1079,7 +1082,7 @@ fu! ctrlp#acceptfile(...)
 	cal s:PrtExit()
 	let tail = s:tail()
 	let j2l = atl != '' ? atl : matchstr(tail, '^ +\zs\d\+$')
-	if ( s:jmptobuf =~ md || ( !empty(s:jmptobuf) && s:jmptobuf !~# '\v^0$' && md =~ '[et]' ) ) && bufnr > 0
+	if bufnr > 0 && ( !empty(s:jmptobuf) && s:jmptobuf =~ md )
 		\ && !( md == 'e' && bufnr == bufnr('%') )
 		let [jmpb, bufwinnr] = [1, bufwinnr(bufnr)]
 		let buftab = ( s:jmptobuf =~# '[tTVH]' || s:jmptobuf > 1 )
@@ -1368,7 +1371,16 @@ endf
 fu! s:compmreb(...)
 	" By last entered time (bufnr)
 	let [id1, id2] = [index(s:mrbs, a:1), index(s:mrbs, a:2)]
-	retu id1 == id2 ? 0 : id1 > id2 ? 1 : -1
+	if id1 == id2
+		return 0
+	endif
+	if id1 < 0
+		return 1
+	endif
+	if id2 < 0
+		return -1
+	endif
+	return id1 > id2 ? 1 : -1
 endf
 
 fu! s:compmref(...)
@@ -1646,8 +1658,16 @@ fu! s:samerootsyml(each, isfile, cwd)
 endf
 
 fu! ctrlp#rmbasedir(items)
+	if a:items == []
+		retu a:items
+	en
 	let cwd = s:dyncwd.s:lash()
-	if a:items != [] && !stridx(a:items[0], cwd)
+	let first = a:items[0]
+	if has('win32') || has('win64')
+		let cwd = tr(cwd, '\', '/')
+		let first = tr(first, '\', '/')
+	en
+	if !stridx(first, cwd)
 		let idx = strlen(cwd)
 		retu map(a:items, 'strpart(v:val, idx)')
 	en
@@ -1734,7 +1754,7 @@ fu! ctrlp#syntax()
 	en
 	sy match CtrlPNoEntries '^ == NO ENTRIES ==$'
 	if hlexists('CtrlPLinePre')
-		sy match CtrlPLinePre '^>'
+		exe "sy match CtrlPLinePre '^".escape(get(g:, 'ctrlp_line_prefix', '>'),'^$.*~\')."'"
 	en
 
 	if s:itemtype == 1 && s:has_conceal
@@ -1912,8 +1932,21 @@ fu! s:bufwins(bufnr)
 	retu winns
 endf
 
+fu! s:isabs(path)
+	if (has('win32') || has('win64'))
+		return a:path =~ '^\([a-zA-Z]:\)\{-}[/\\]'
+	el
+		return a:path =~ '^[/\\]'
+	en
+endf
+
 fu! s:bufnrfilpath(line)
-	let filpath = fnamemodify(a:line, ':p')
+	if s:isabs(a:line) || a:line =~ '^\~[/\\]'
+		let filpath = a:line
+	el
+		let filpath = s:dyncwd.s:lash().a:line
+	en
+	let filpath = fnamemodify(filpath, ':p')
 	let bufnr = bufnr('^'.filpath.'$')
 	if (a:line =~ '[\/]\?\[\d\+\*No Name\]$' && !filereadable(filpath) && bufnr < 1)
 		let bufnr = str2nr(matchstr(a:line, '[\/]\?\[\zs\d\+\ze\*No Name\]$'))
