@@ -1,0 +1,11 @@
+pane	0	0	:scratch	0	:	0	:/home/oltp	1	bash	:
+pane	0	1	:cavu	0	:-	0	:/home/oltp	1	ssh	:ssh navi-bob
+pane	0	1	:cavu	0	:-	1	:/home/oltp/5_40/Deploy	0	bash	:
+pane	0	2	:dotfiles	1	:*	0	:/home/oltp	0	bash	:
+pane	0	2	:dotfiles	1	:*	1	:/home/oltp/muhdotfiles	1	bash	:
+pane	0	3	:golang	0	:	0	:/home/oltp	1	bash	:
+window	0	0	0	:	5ae1,211x52,0,0,12
+window	0	1	0	:-	6e1c,211x52,0,0{105x52,0,0,9,105x52,106,0,16}
+window	0	2	1	:*	95c9,211x52,0,0{105x52,0,0,13,105x52,106,0,18}
+window	0	3	0	:	5ae6,211x52,0,0,17
+state	0	

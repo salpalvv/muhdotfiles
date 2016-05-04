@@ -66,7 +66,7 @@ ln -sf ~/muhdotfiles/.profile ~/.profile
 ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
 
 ln -sf ~/muhdotfiles/.tmux.conf ~/.tmux.conf
-
+ln -sf ~/muhdotfiles/.tmux/ ~/.tmux
 # }}}
 
 # RHEL family specific {{{
