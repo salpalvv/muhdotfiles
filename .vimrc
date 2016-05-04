@@ -14,7 +14,6 @@ set incsearch
 set ruler 
 set shortmess+=I
 set autoread
-set mouse=a
 set relativenumber
 
 set hlsearch

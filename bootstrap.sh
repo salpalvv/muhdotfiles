@@ -1,33 +1,37 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # bootstrap based on os {{{
 
 # if redhat family {{{
 if [ -f /etc/redhat_release ]; then
 	echo "redhat"
-	 yum install -y git vim wget curl rsync nc 
-	
-	 # golang setup
-	
-	 # libevent + tmux {{{
-	
-	 pushd ~
-	 
-	 yum install -y ncurses-devel
-	 yum install -y gclibc-static
-	 
-	 wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
-	 tar xzvf libevent-2.0.22-stable.tar.gz
-	 cd libevent-2.0.22-stable
-	 ./configure && make && make install
-	 
-	 wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
-	 tar xzvf tmux-2.2.tar.gz
-	 cd tmux-2.2
-	 ./configure && make && make install
-	 popd 
-	 
-	 # }}}
+
+#	yum install -y git vim wget curl rsync nc 
+#	
+#	# golang setup
+#	wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
+#	tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz
+#	export PATH=$PATH:/usr/local/go/bin
+#
+#	# libevent + tmux {{{
+#	
+#	pushd ~
+#	if [ ! -f /usr/local/bin/tmux ]; then	
+#		yum install -y ncurses-devel
+#		yum install -y gclibc-static
+#		
+#		wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
+#		tar xzvf libevent-2.0.22-stable.tar.gz
+#		cd libevent-2.0.22-stable
+#		./configure && make && make install
+#		
+#		wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
+#		tar xzvf tmux-2.2.tar.gz
+#		cd tmux-2.2
+#		./configure && make && make install
+#		popd 
+#	fi	
+#	# }}}
 
 # }}}
 # if debian family {{{
@@ -43,7 +47,8 @@ elif [ $(uname) == 'Darwin' ]; then
 	brew install brew-cask
 	brew tap caskroom/versions
 	
-	
+else 
+	echo "OS not recognized"	
 fi
 # }}}
 
