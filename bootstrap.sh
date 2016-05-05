@@ -55,18 +55,7 @@ fi
 # }}}
 
 # do some symlinking of dotfiles {{{
-
-ln -sf ~/muhdotfiles/.vimrc ~/.vimrc
-ln -sf ~/muhdotfiles/.vim/ ~/.vim
-
-ln -sf ~/muhdotfiles/.bashrc ~/.bashrc
-ln -sf ~/muhdotfiles/.bash_profile ~/.bash_profile
-ln -sf ~/muhdotfiles/.profile ~/.profile
-
-ln -sf ~/muhdotfiles/.gitconfig ~/.gitconfig
-
-ln -sf ~/muhdotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/muhdotfiles/.tmux/ ~/.tmux
+make all
 # }}}
 
 # RHEL family specific {{{
