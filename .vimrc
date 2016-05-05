@@ -44,8 +44,8 @@ syntax on
 
 " solarized
 syntax enable
-set background=light
-" colorscheme solarized
+set background=dark
+colorscheme solarized
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -74,5 +74,8 @@ let g:syntastic_check_on_wq = 0
 
 " airline
 set laststatus=2
+let g:airline_theme = 'solarized'
+
+" vim-indent-guides
 
 " }}}

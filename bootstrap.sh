@@ -8,30 +8,30 @@ if [ -f /etc/redhat_release ]; then
 
 #	yum install -y epel-release
 #	yum install -y git vim wget curl rsync nc gitflow
-#	
+#
 #	# golang setup
 #	wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
 #	tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz
 #	export PATH=$PATH:/usr/local/go/bin
 #
 #	# libevent + tmux {{{
-#	
+#
 #	pushd ~
-#	if [ ! -f /usr/local/bin/tmux ]; then	
+#	if [ ! -f /usr/local/bin/tmux ]; then
 #		yum install -y ncurses-devel
 #		-y yum install -y gclibc-static
-#		
+#
 #		wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
 #		tar xzvf libevent-2.0.22-stable.tar.gz
 #		cd libevent-2.0.22-stable
 #		./configure && make && make install
-#		
+#
 #		wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
 #		tar xzvf tmux-2.2.tar.gz
 #		cd tmux-2.2
 #		./configure && make && make install
-#		popd 
-#	fi	
+#		popd
+#	fi
 #	# }}}
 
 # }}}
@@ -47,15 +47,14 @@ elif [ $(uname) == 'Darwin' ]; then
 	brew tap caskroom/cask
 	brew install brew-cask
 	brew tap caskroom/versions
-	
-else 
-	echo "OS not recognized"	
+else
+	echo "OS not recognized"
 fi
 # }}}
 
 # }}}
 
-# do some symlinking of dotfiles {{{ 
+# do some symlinking of dotfiles {{{
 
 ln -sf ~/muhdotfiles/.vimrc ~/.vimrc
 ln -sf ~/muhdotfiles/.vim/ ~/.vim
@@ -72,28 +71,28 @@ ln -sf ~/muhdotfiles/.tmux/ ~/.tmux
 
 # RHEL family specific {{{
 
-# yum install -y git vim wget curl rsync nc 
+# yum install -y git vim wget curl rsync nc
 
 # golang setup
 
 # libevent + tmux {{{
 
 # pushd ~
-# 
+#
 # yum install -y ncurses-devel
 # yum install -y gclibc-static
-# 
+#
 # wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
 # tar xzvf libevent-2.0.22-stable.tar.gz
 # cd libevent-2.0.22-stable
 # ./configure && make && make install
-# 
+#
 # wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
 # tar xzvf tmux-2.2.tar.gz
 # cd tmux-2.2
 # ./configure && make && make install
-# popd 
-# 
+# popd
+#
 # }}}
 
 # }}}
@@ -106,11 +105,11 @@ ln -sf ~/muhdotfiles/.tmux/ ~/.tmux
 #   activate
 #   set current pane to pane "com.apple.preference.keyboard"
 # end tell
-# 
+#
 # tell application "System Events"
 #   tell application process "System Preferences"
 #     get properties
-#     
+#
 #     click button "Modifier Keys…" of tab group 1 of window "Keyboard"
 #     tell sheet 1 of window "Keyboard"
 #       click pop up button 4
@@ -118,7 +117,7 @@ ln -sf ~/muhdotfiles/.tmux/ ~/.tmux
 #       click button "OK"
 #     end tell
 #   end tell
-#   
+#
 #   tell application "System Preferences" to quit
 # end tell
 # }}}

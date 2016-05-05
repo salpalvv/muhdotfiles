@@ -1,7 +1,7 @@
 # Make vim the default editor.
 export EDITOR='vim'
 
-# Go envs 
+# Go envs
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 
@@ -25,3 +25,8 @@ export LANG="en_US"
 
 export MANPAGER="less -X" # Don’t clear the screen after quitting a manual page
 
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
