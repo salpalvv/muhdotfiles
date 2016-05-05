@@ -1,24 +1,22 @@
-" basic settings {{{ 
+" basic settings {{{
 
 " use two spaces for indentation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
-let g:indent_guides_start_level = 1
-let g:indent_guides_start_size = 2
 
 set ignorecase
 set smartcase
 set incsearch
-set ruler 
+set ruler
 set shortmess+=I
 set autoread
 set relativenumber
 
 set hlsearch
 
-" Get rid of those enticing arrow keys 
+" Get rid of those enticing arrow keys
 nnoremap <Right> <C-w>l
 nnoremap <Left> <C-w>h
 nnoremap <Up> <C-w>k
@@ -27,22 +25,24 @@ nnoremap <Down> <C-w>j
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-"}}}
+" enable folding
+set foldmethod=manual
+autocmd BufRead * setlocal foldmethod=marker
+autocmd BufRead * normal zM
 
-" pathogen {{{
-if has('win32') || has('win64')
-	set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-endif
-call pathogen#infect()
-call pathogen#helptags()
 " }}}
 
 " Plugins {{{
-" Enable filetype plugins 
+
+" pathogen
+execute pathogen#infect()
+execute pathogen#helptags()
+
+" Enable filetype plugins
 filetype plugin on
 syntax on
 
-" solarized 
+" solarized
 syntax enable
 set background=light
 " colorscheme solarized
@@ -60,11 +60,19 @@ let g:go_highlight_build_constraints = 1
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_show_hidden = 1
 
-" }}}
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-" enable folding {{{
-set foldmethod=manual
-autocmd BufRead * setlocal foldmethod=marker
-autocmd BufRead * normal zM
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" airline
+set laststatus=2
+
 " }}}

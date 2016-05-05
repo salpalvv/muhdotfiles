@@ -6,7 +6,8 @@
 if [ -f /etc/redhat_release ]; then
 	echo "redhat"
 
-#	yum install -y git vim wget curl rsync nc 
+#	yum install -y epel-release
+#	yum install -y git vim wget curl rsync nc gitflow
 #	
 #	# golang setup
 #	wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
@@ -18,7 +19,7 @@ if [ -f /etc/redhat_release ]; then
 #	pushd ~
 #	if [ ! -f /usr/local/bin/tmux ]; then	
 #		yum install -y ncurses-devel
-#		yum install -y gclibc-static
+#		-y yum install -y gclibc-static
 #		
 #		wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
 #		tar xzvf libevent-2.0.22-stable.tar.gz
