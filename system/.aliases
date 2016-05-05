@@ -6,7 +6,7 @@ alias v="vim"
 alias rr="rm -rf"
 
 # dir listing/traversal
-alias l="ls -lahA"
+alias l="ls -lhAp"
 alias ll="ls -lA"
 alias lt="ls -lhAtr"
 alias ld="ls -ld */"
