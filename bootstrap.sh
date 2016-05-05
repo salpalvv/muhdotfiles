@@ -6,33 +6,33 @@
 if [ -f /etc/redhat_release ]; then
 	echo "redhat"
 
-#	yum install -y epel-release
-#	yum install -y git vim wget curl rsync nc gitflow
-#
-#	# golang setup
-#	wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
-#	tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz
-#	export PATH=$PATH:/usr/local/go/bin
-#
-#	# libevent + tmux {{{
-#
-#	pushd ~
-#	if [ ! -f /usr/local/bin/tmux ]; then
-#		yum install -y ncurses-devel
-#		-y yum install -y gclibc-static
-#
-#		wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
-#		tar xzvf libevent-2.0.22-stable.tar.gz
-#		cd libevent-2.0.22-stable
-#		./configure && make && make install
-#
-#		wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
-#		tar xzvf tmux-2.2.tar.gz
-#		cd tmux-2.2
-#		./configure && make && make install
-#		popd
-#	fi
-#	# }}}
+	yum install -y epel-release
+	yum install -y git vim wget curl rsync nc gitflow
+
+	# golang setup
+	wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
+	tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz
+	export PATH=$PATH:/usr/local/go/bin
+
+	# libevent + tmux {{{
+
+	pushd ~
+	if [ ! -f /usr/local/bin/tmux ]; then
+		yum install -y ncurses-devel
+		-y yum install -y gclibc-static
+
+		wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
+		tar xzvf libevent-2.0.22-stable.tar.gz
+		cd libevent-2.0.22-stable
+		./configure && make && make install
+
+		wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
+		tar xzvf tmux-2.2.tar.gz
+		cd tmux-2.2
+		./configure && make && make install
+		popd
+	fi
+	# }}}
 
 # }}}
 # if debian family {{{
@@ -55,7 +55,9 @@ fi
 # }}}
 
 # do some symlinking of dotfiles {{{
+
 make all
+
 # }}}
 
 # RHEL family specific {{{
