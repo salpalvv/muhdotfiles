@@ -1,0 +1,5 @@
+---
+- name: yum all the things 
+  yum: "name={{ item }} state=installed"
+  with_items: "{{ yum-pkgs }}"
+

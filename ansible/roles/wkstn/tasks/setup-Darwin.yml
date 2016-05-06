@@ -1,0 +1,5 @@
+---
+- name: brew all the things
+  brew: "name={{ item }} state=installed"
+  with_items: "{{ brew-formulas }}"
+

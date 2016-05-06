@@ -1,10 +1,10 @@
 " basic settings {{{
 
 " use two spaces for indentation
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
 set ignorecase
 set smartcase
@@ -66,6 +66,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_show_hidden = 1
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>p :CtrlP<CR>
+nnoremap <Leader>l :CtrlPLine<CR>
 
 " syntastic
 set statusline+=%#warningmsg#

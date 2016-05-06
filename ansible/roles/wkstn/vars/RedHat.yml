@@ -1,0 +1,7 @@
+---
+__yum-pkgs:
+  - git
+  - wget
+  - curl
+  - epel-release
+  - vim

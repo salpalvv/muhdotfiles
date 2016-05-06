@@ -1,0 +1,8 @@
+---
+__brew-formulas:
+  - git
+  - curl
+  - wget
+  - tmux
+  - vim
+  - macvim

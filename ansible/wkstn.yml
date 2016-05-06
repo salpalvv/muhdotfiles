@@ -1,0 +1,11 @@
+---
+- hosts: wkstn
+
+  vars:
+    firewall_allowed_tcp_ports:
+    - "22"
+    - "80"
+
+  roles:
+    - firewall
+    - wkstn

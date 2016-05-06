@@ -1,0 +1,7 @@
+---
+__apt-pkgs:
+  - git
+  - wget 
+  - curl
+  - tmux
+  - vim
