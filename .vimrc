@@ -30,21 +30,6 @@ set foldmethod=manual
 autocmd BufRead * setlocal foldmethod=marker
 autocmd BufRead * normal zM
 
-" some buffer stuff
-nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>n :bn<CR>
-nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
 " It's useful to show the buffer number in the status line.
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
@@ -79,6 +64,8 @@ let g:go_highlight_build_constraints = 1
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_show_hidden = 1
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>p :CtrlP<CR>
 
 " syntastic
 set statusline+=%#warningmsg#
