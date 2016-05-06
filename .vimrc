@@ -81,6 +81,4 @@ let g:syntastic_check_on_wq = 0
 set laststatus=2
 let g:airline_theme = 'solarized'
 
-" vim-indent-guides
-
 " }}}
