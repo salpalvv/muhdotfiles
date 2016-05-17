@@ -63,3 +63,9 @@ install_tmux: clean_tmux
 clean_tmux:
 	rm -Rf ~/.tmux.conf
 	rm -Rf ~/.tmux
+
+.PHONY: help add clean \
+	install_bash clean_bash \
+	install_vim clean_vim \
+	install_git clean_git \
+	install_tmux clean_tmux

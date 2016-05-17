@@ -17,3 +17,7 @@ alias ....="cd ../../.."
 
 # tmux kill all sessions
 alias tmuxkillall="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}"
+
+alias svnst="svn st | grep -E '^M|^A'"
+
+alias br=". ~/.bash_profile"

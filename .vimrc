@@ -1,10 +1,10 @@
 " basic settings {{{
 
 " use two spaces for indentation
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
 
 set ignorecase
 set smartcase
@@ -13,15 +13,20 @@ set ruler
 set shortmess+=I
 set autoread
 set relativenumber
+set number
 
 set hlsearch
 
 " Get rid of those enticing arrow keys
-nnoremap <Right> <C-w>l
-nnoremap <Left> <C-w>h
-nnoremap <Up> <C-w>k
-nnoremap <Down> <C-w>j
-
+noremap <Right> <NOP>
+noremap <Left> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+"noremap h <NOP>
+"noremap k <NOP>
+"noremap j <NOP>
+"noremap l <NOP>
+"
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
