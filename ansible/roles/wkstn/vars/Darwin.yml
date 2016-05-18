@@ -6,3 +6,27 @@ __brew-formulas:
   - tmux
   - vim
   - macvim
+  - irssi
+  - bash-completion
+  - git-flow
+  - nmap
+  - tree
+  - unrar
+  - htop
+  - python
+  - python3
+  - the_silver_searcher
+
+__brew_casks:
+  - google-chrome
+  - dropbox
+  - virtualbox
+  - skype
+  - vlc
+  - the-unarchiver
+  - deluge
+  - android-studio
+  - lyx
+  - blender
+  - vmware-fusion
+  - iterm2
