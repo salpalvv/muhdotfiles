@@ -50,8 +50,7 @@ syntax on
 nnoremap <leader>a :Git add %:p<CR><CR>
 nnoremap <leader>. :Git a<CR><CR>
 nnoremap <leader>s :Gstatus<CR>
-nnoremap <leader>c :Gcommit -v -q<CR>
-nnoremap <leader>t :Gcommit -v -q %:p<CR>
+nnoremap <leader>cm :Git cm<CR>
 nnoremap <leader>d :Gdiff<CR>
 nnoremap <leader>e :Gedit<CR>
 nnoremap <leader>r :Gread<CR>
