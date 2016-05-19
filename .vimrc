@@ -22,11 +22,7 @@ noremap <Right> <NOP>
 noremap <Left> <NOP>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
-"noremap h <NOP>
-"noremap k <NOP>
-"noremap j <NOP>
-"noremap l <NOP>
-"
+
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
@@ -50,6 +46,19 @@ execute pathogen#helptags()
 filetype plugin on
 syntax on
 
+" fugitive
+nnoremap <leader>a :Git add %:p<CR><CR>
+nnoremap <leader>. :Git a<CR><CR>
+nnoremap <leader>s :Gstatus<CR>
+nnoremap <leader>c :Gcommit -v -q<CR>
+nnoremap <leader>t :Gcommit -v -q %:p<CR>
+nnoremap <leader>d :Gdiff<CR>
+nnoremap <leader>e :Gedit<CR>
+nnoremap <leader>r :Gread<CR>
+nnoremap <leader>w :Gwrite<CR><CR>
+nnoremap <leader>f :Ggrep<Space>
+nnoremap <leader>mv :Gmove<Space>
+
 " solarized
 syntax enable
 set background=dark
@@ -72,11 +81,11 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 let g:go_metalinter_enabled = 1
 
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <leader>gd <Plug>(go-doc)
+au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1

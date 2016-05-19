@@ -3,3 +3,10 @@
   brew: "name={{ item }} state=installed"
   with_items: "{{ brew-formulas }}"
 
+- name: brew cask all the other things
+  homebrew_cask: "name={{ item }} state=installed"
+  with_items: "{{ brew-casks }}"
+
+# what else do we need it to do for Mac?
+# remap caps to ctrl
+#

@@ -11,3 +11,6 @@
 
 - include: setup-Darwin.yml
   when: ansible_os_family == 'Darwin'
+
+# global configs DRY
+# create symlinks basically "make all"

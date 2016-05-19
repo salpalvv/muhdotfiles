@@ -16,6 +16,8 @@ __brew-formulas:
   - python
   - python3
   - the_silver_searcher
+  - jenkins
+  - go
 
 __brew_casks:
   - google-chrome
@@ -30,3 +32,5 @@ __brew_casks:
   - blender
   - vmware-fusion
   - iterm2
+  - vagrant
+  - java
