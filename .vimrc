@@ -8,6 +8,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
+set smarttab
+set autoindent
+set smartindent
 
 set ignorecase
 set smartcase
@@ -36,6 +39,10 @@ autocmd BufRead * normal zM
 
 " It's useful to show the buffer number in the status line.
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
+inoremap { {<CR><BS>}<Esc>ko
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
 
 " }}}
 
