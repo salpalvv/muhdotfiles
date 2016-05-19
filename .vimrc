@@ -1,5 +1,8 @@
 " basic settings {{{
 
+set nocompatible
+set backspace=2
+
 " use two spaces for indentation
 set tabstop=4
 set softtabstop=4
