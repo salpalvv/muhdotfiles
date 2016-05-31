@@ -2,6 +2,11 @@
 
 set nocompatible
 set backspace=2
+set hidden 
+set showmatch 
+set nobackup
+set noswapfile
+set pastetoggle=<F2>
 
 " use two spaces for indentation
 set tabstop=4
@@ -12,16 +17,11 @@ set smarttab
 set autoindent
 set smartindent
 
-set ignorecase
-set smartcase
-set incsearch
 set ruler
 set shortmess+=I
 set autoread
 set relativenumber
 set number
-
-set hlsearch
 
 " Get rid of those enticing arrow keys
 noremap <Right> <NOP>
@@ -31,6 +31,16 @@ noremap <Down> <NOP>
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+nnoremap ; :
+
+" search easier
+set gdefault
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
 
 " enable folding
 set foldmethod=manual
@@ -53,7 +63,7 @@ execute pathogen#infect()
 execute pathogen#helptags()
 
 " Enable filetype plugins
-filetype plugin on
+filetype plugin indent on
 syntax on
 
 " fugitive
