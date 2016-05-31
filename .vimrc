@@ -2,8 +2,8 @@
 
 set nocompatible
 set backspace=2
-set hidden 
-set showmatch 
+set hidden
+set showmatch
 set nobackup
 set noswapfile
 set pastetoggle=<F2>
@@ -42,6 +42,9 @@ set smartcase
 set incsearch
 set hlsearch
 
+" remove whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
 " enable folding
 set foldmethod=manual
 autocmd BufRead * setlocal foldmethod=marker
@@ -67,7 +70,7 @@ filetype plugin indent on
 syntax on
 
 " fugitive
-nnoremap <leader>a :Git add %:p<CR><CR>
+nnoremap <leader>A :Git add %:p<CR><CR>
 nnoremap <leader>. :Git a<CR><CR>
 nnoremap <leader>s :Gstatus<CR>
 nnoremap <leader>cm :Git cm<CR>
@@ -83,8 +86,12 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
+" Ag
+nnoremap <leader>a :Ag 
+
+" fzf
+nnoremap <leader>p :Files<CR>
+set rtp+=~/.fzf
 
 " vim-go
 let g:go_highlight_functions = 1
@@ -108,13 +115,6 @@ au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
-
-" ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_show_hidden = 1
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>p :CtrlP<CR>
-nnoremap <Leader>l :CtrlPLine<CR>
 
 " syntastic
 set statusline+=%#warningmsg#

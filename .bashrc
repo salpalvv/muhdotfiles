@@ -9,3 +9,5 @@ done;
 # add bash specific exports here
 unset SSH_ASKPASS
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

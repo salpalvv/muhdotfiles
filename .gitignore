@@ -1,3 +1,4 @@
 navi-*
 .tmux/resurrect
 *.swp
+*.netrwhist
