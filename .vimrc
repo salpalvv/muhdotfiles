@@ -7,6 +7,8 @@ set showmatch
 set nobackup
 set noswapfile
 set pastetoggle=<F2>
+set visualbell
+set noerrorbells
 
 " use two spaces for indentation
 set tabstop=4

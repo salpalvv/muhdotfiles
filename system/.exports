@@ -26,3 +26,5 @@ export LANG="en_US"
 export MANPAGER="less -X" # Don’t clear the screen after quitting a manual page
 
 export TERM='screen-256color'
+
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -g ""'

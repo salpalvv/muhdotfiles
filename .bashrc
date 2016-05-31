@@ -1,5 +1,8 @@
 if [ -f ~/.bashrc.old ]; then
-source ~/.bashrc.old
+	source ~/.bashrc.old
+else
+	mv ~/.bashrc ~/.bashrc.old
+	source ~/.bashrc.old
 fi
 
 for file in ~/muhdotfiles/system/.{prompt,inputrc,aliases,functions}; do
