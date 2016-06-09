@@ -14,4 +14,3 @@ unset SSH_ASKPASS
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
