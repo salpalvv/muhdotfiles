@@ -55,7 +55,8 @@ autocmd BufRead * normal zM
 " It's useful to show the buffer number in the status line.
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
-inoremap { {<CR><BS>}<Esc>ko
+inoremap { {}<Esc>i
+autocmd FileType go inoremap { {<CR><BS>}<Esc>ko
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 
