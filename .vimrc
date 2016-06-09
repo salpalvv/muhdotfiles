@@ -88,8 +88,9 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+
 " Ag
-nnoremap <leader>a :Ag 
+nnoremap <leader>a :Ag<Space>
 
 " fzf
 nnoremap <leader>p :Files<CR>
