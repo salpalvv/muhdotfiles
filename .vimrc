@@ -26,12 +26,12 @@ set relativenumber
 set number
 
 " Get rid of those enticing arrow keys
-noremap <Right> <NOP>
-noremap <Left> <NOP>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
+map <right> <nop>
+map <left> <nop>
+map <up> <nop>
+map <down> <nop>
 
-nnoremap <SPACE> <Nop>
+nnoremap <space> <nop>
 let mapleader=" "
 nnoremap ; :
 
@@ -57,6 +57,8 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 inoremap { {}<Esc>i
 autocmd FileType go inoremap { {<CR><BS>}<Esc>ko
+autocmd FileType go inoremap ' ''<Esc>i
+autocmd FileType go inoremap " ""<Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 
