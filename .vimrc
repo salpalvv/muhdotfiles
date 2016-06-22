@@ -26,11 +26,20 @@ set relativenumber
 set number
 
 " Get rid of those enticing arrow keys
-map <right> <nop>
-map <left> <nop>
-map <up> <nop>
-map <down> <nop>
+vnoremap <right> <nop>
+vnoremap <left> <nop>
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+inoremap <right> <nop>
+inoremap <left> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+nnoremap <right> <nop>
+nnoremap <left> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
 
+" some nice keybindings
 nnoremap <space> <nop>
 let mapleader=" "
 nnoremap ; :
@@ -44,8 +53,18 @@ set smartcase
 set incsearch
 set hlsearch
 
+" copy paste easier
+vnoremap <leader>d "+d
+vnoremap <leader>y "+y
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+nnoremap <leader>d "+d
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+
 " remove whitespace
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 " enable folding
 set foldmethod=manual
@@ -77,14 +96,14 @@ syntax on
 " fugitive
 nnoremap <leader>A :Git add %:p<CR><CR>
 nnoremap <leader>. :Git a<CR><CR>
-nnoremap <leader>s :Gstatus<CR>
-nnoremap <leader>cm :Git cm<CR>
-nnoremap <leader>d :Gdiff<CR>
-nnoremap <leader>e :Gedit<CR>
-nnoremap <leader>r :Gread<CR>
-nnoremap <leader>w :Gwrite<CR><CR>
-nnoremap <leader>f :Ggrep<Space>
-nnoremap <leader>mv :Gmove<Space>
+nnoremap <leader>S :Gstatus<CR>
+nnoremap <leader>CM :Git cm<CR>
+nnoremap <leader>D :Gdiff<CR>
+nnoremap <leader>E :Gedit<CR>
+nnoremap <leader>R :Gread<CR>
+nnoremap <leader>W :Gwrite<CR><CR>
+nnoremap <leader>F :Ggrep<Space>
+nnoremap <leader>MV :Gmove<Space>
 
 " solarized
 syntax enable
@@ -96,7 +115,7 @@ colorscheme solarized
 nnoremap <leader>a :Ag<Space>
 
 " fzf
-nnoremap <leader>p :Files<CR>
+nnoremap <C>p :Files<CR>
 set rtp+=~/.fzf
 
 " vim-go
