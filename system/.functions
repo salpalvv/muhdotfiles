@@ -33,6 +33,13 @@ function mkd() {
   mkdir -p "$@" && cd "$_";
 }
 
+fd() {
+    # fd - cd to selected directory
+    local dir
+	dir=$(find ${1:-*} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) &&
+		cd "$dir"
+}
+
 # Tmux {{{
 # Makes creating a new tmux session (with a specific name) easier
 function tmuxopen() {

@@ -153,6 +153,6 @@ let g:syntastic_check_on_wq = 0
 
 " airline
 set laststatus=2
-let g:airline_theme = 'solarized'
+let g:airline_theme='solarized'
 
 " }}}

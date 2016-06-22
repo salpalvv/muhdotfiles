@@ -1,7 +1,7 @@
 if [ -f ~/.bashrc.old ]; then
 	source ~/.bashrc.old
 else
-	mv ~/.bashrc ~/.bashrc.old
+	cp ~/.bashrc ~/.bashrc.old
 	source ~/.bashrc.old
 fi
 
@@ -11,6 +11,5 @@ done;
 
 # add bash specific exports here
 unset SSH_ASKPASS
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
