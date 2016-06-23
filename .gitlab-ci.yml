@@ -7,7 +7,7 @@ stages:
 
 before_script:
   - apt-get -y update
-  - apt-get -y install make
+  - apt-get -y install make git
 
 job1:
   stage: build
