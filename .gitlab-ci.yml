@@ -1,7 +1,16 @@
+image: ubuntu:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
 before_script:
-  - yum -y update
+  - apt-get -y update
 
-test_job:
+job1:
+  stage: build
   script:
-  - make all
-
+    - make all
+  tags:
+    - dotfiles
