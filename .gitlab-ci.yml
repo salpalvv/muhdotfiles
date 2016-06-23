@@ -5,6 +5,3 @@ test_job:
   script:
   - make all
 
-job:
-  tags:
-    - dotfiles
