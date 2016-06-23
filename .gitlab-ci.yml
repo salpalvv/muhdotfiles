@@ -1,0 +1,10 @@
+before_script:
+  - yum -y update
+
+test_job:
+  script:
+  - make all
+
+job:
+  tags:
+    - dotfiles
