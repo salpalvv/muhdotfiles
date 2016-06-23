@@ -1,10 +1,3 @@
-if [ -f ~/.bashrc.old ]; then
-	source ~/.bashrc.old
-else
-	cp ~/.bashrc ~/.bashrc.old
-	source ~/.bashrc.old
-fi
-
 for file in ~/muhdotfiles/system/.{prompt,inputrc,aliases,functions,git-completion.bash}; do
 [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
