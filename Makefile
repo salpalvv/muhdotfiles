@@ -52,6 +52,8 @@ clean_vim:
 
 install_git: clean_git
 	ln -sf `pwd`/.gitconfig ~/.gitconfig
+	git submodule init
+	git submodule update
 
 clean_git:
 	rm -Rf ~/.gitconfig
