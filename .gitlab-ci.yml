@@ -9,7 +9,12 @@ before_script:
   - apt-get -y update
   - apt-get -y install make git
 
-job1:
+make:
   stage: build
   script:
     - make all
+
+test:
+  stage: test
+  script:
+    - echo "how does only test dotfiles?"
