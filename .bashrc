@@ -5,4 +5,6 @@ done;
 # add bash specific exports here
 unset SSH_ASKPASS
 
+set -o vi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
