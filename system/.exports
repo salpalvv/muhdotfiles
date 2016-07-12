@@ -28,3 +28,6 @@ export MANPAGER="less -X" # Don’t clear the screen after quitting a manual pag
 export TERM='screen-256color'
 
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .svn -f -g ""'
+
+export JAVA_HOME=/usr/lib/jvm/java
+export PATH=$PATH:/usr/lib/scala/bin

@@ -58,3 +58,6 @@
 [submodule "src/vim"]
 	path = src/vim
 	url = https://github.com/vim/vim
+[submodule ".vim/bundle/vim-scala"]
+	path = .vim/bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala
