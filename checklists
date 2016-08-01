@@ -1,0 +1,48 @@
+perf analysis
+uptime
+dmsg -T | tail
+vmstat 1
+mpstat -P All 1
+pidstat 1
+iostat -xz 1
+free -m
+sar -n DEV 1
+sar -n TCP,ETCP 1
+top
+
+disk checklist
+iostat -xnz 1
+vmstat 1
+df -h
+ext4slower 10
+bioslower 10
+ext4dist
+biolatency 1
+cat /sys/devices/.../ioerr_cnt
+smartctl -l error /dev/sda1
+
+network checklist
+sar -n DEV,EDEV 1
+sar -n TCP,ETCP 1
+cat /etc/resolv.conf
+mpstat -P ALL 1
+tcpretrans
+tcpconnect
+tcpaccept
+netstat -rnv
+check firewall config
+netstat -s
+
+NOTE: tcp* are from bcc/BPF tools
+
+cpu checklist
+uptime
+vmstat 1
+mpstat -P ALL 1
+pidstat 1
+CPU Flame Graph
+CPU Subsecond offset heat map
+perf stat -a --sleep 10
+
+htop
+
