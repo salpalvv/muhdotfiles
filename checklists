@@ -1,4 +1,4 @@
-perf analysis
+#perf analysis
 uptime
 dmsg -T | tail
 vmstat 1
@@ -10,7 +10,7 @@ sar -n DEV 1
 sar -n TCP,ETCP 1
 top
 
-disk checklist
+#disk checklist
 iostat -xnz 1
 vmstat 1
 df -h
@@ -21,7 +21,7 @@ biolatency 1
 cat /sys/devices/.../ioerr_cnt
 smartctl -l error /dev/sda1
 
-network checklist
+#network checklist
 sar -n DEV,EDEV 1
 sar -n TCP,ETCP 1
 cat /etc/resolv.conf
@@ -33,9 +33,9 @@ netstat -rnv
 check firewall config
 netstat -s
 
-NOTE: tcp* are from bcc/BPF tools
+#NOTE: tcp* are from bcc/BPF tools
 
-cpu checklist
+#cpu checklist
 uptime
 vmstat 1
 mpstat -P ALL 1
