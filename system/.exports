@@ -32,3 +32,4 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .svn -f -g ""'
 export JAVA_HOME=/usr/lib/jvm/java
 export PATH=$PATH:/usr/lib/scala/bin
 export PATH=$PATH:~/apache-maven-3.3.9/bin
+export PATH=$PATH:~/protoc/bin
