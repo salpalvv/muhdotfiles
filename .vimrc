@@ -6,11 +6,15 @@ set hidden
 set showmatch
 set nobackup
 set noswapfile
-set pastetoggle=<F2>
 set visualbell
 set noerrorbells
 
 set encoding=utf-8
+
+" pastetoggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 
 " use two spaces for indentation
 set tabstop=4
@@ -65,6 +69,14 @@ nnoremap <leader>y "+y
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 
+" splits
+set splitright
+set splitbelow
+nnoremap <leader>h <C-W><C-H>
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+
 " remove whitespace
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -85,13 +97,13 @@ inoremap [ []<Esc>i
 
 " PEP8 indentation
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
+\ set tabstop=4 |
+\ set softtabstop=4 |
+\ set shiftwidth=4 |
+\ set textwidth=79 |
+\ set expandtab |
+\ set autoindent |
+\ set fileformat=unix |
 
 " flag bad whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred

@@ -7,4 +7,6 @@
 	s = status
 	a = !git add . && git s
 	cm = commit -m
-	ppppushit = push -u origin --all
+	pushit = push -u origin --all
+	rmrf = rm -rf 
+	mv = mv -v
