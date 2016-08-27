@@ -1,3 +1,4 @@
-source ~/.profile
-source ~/.bashrc
+if [ -f ~/.profile ]; then . ~/.profile; fi 
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi 
+
 # source ~/.zshrc
