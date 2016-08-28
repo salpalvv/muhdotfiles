@@ -8,5 +8,5 @@
 	a = !git add . && git s
 	cm = commit -m
 	pushit = push -u origin --all
-	rmrf = rm -rf 
+	rmrf = rm -rf
 	mv = mv -v

@@ -13,24 +13,25 @@ help:
 	@echo 'Makefile for dotfiles 								'
 	@echo '														'
 	@echo 'Usage: 												'
-	@echo '	make world            install everything				'
+	@echo '	make world          install everything				'
 	@echo '	make install_bash   install bash_profile			'
 	@echo '	make install_vim    install vim configuration		'
 	@echo '	make install_git    install git configuration		'
 	@echo '	make install_tmux   install tmux configuration		'
+	@echo '	make install_i3     install i3 configuration		'
 	@echo '														'
 	@echo 'All install commands are also available as clean		'
 	@echo 'commands to remove installed files					'
 	@echo '														'
 
-world: install_bash install_vim install_git install_tmux
+world: install_bash install_vim install_git install_tmux install_i3
 	@echo ""
 	@echo "Installing dotfiles"
 	@echo "======================="
 	@echo ""
 	@echo "done"
 
-clean: clean_bash clean_vim clean_git clean_tmux
+clean: clean_bash clean_vim clean_git clean_tmux clean_i3
 
 install_bash: clean_bash
 	ln -sf `pwd`/.bashrc ~/.bashrc
@@ -65,8 +66,15 @@ clean_tmux:
 	rm -Rf ~/.tmux.conf
 	rm -Rf ~/.tmux
 
+install_i3: clean_i3
+	ln -sf `pwd`/.i3/ ~/.i3
+
+clean_i3:
+	rm -Rf ~/.i3
+
 .PHONY: help world clean \
 	install_bash clean_bash \
 	install_vim clean_vim \
 	install_git clean_git \
-	install_tmux clean_tmux
+	install_tmux clean_tmux \
+	install_i3 clean_i3
