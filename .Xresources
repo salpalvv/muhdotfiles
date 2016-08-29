@@ -1,0 +1,4 @@
+URxvt.font: xft:Hack-Regular:size=12:antialias=true
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+

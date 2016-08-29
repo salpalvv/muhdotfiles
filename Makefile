@@ -68,9 +68,13 @@ clean_tmux:
 
 install_i3: clean_i3
 	ln -sf `pwd`/.i3/ ~/.i3
+	ln -sf `pwd`/.xinitrc ~/.xinitrc
+	ln -sf `pwd`/.Xresources ~/.Xresources
 
 clean_i3:
 	rm -Rf ~/.i3
+	rm -Rf ~/.xinitrc
+	rm -Rf ~/.Xresources
 
 .PHONY: help world clean \
 	install_bash clean_bash \
