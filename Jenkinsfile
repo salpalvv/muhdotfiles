@@ -17,11 +17,11 @@ node('iac'){
 		stage 'checkout'
 			checkout scm
 		stage 'bootstrap'
-			echo 'docker run the centos 6 box'
-		stage 'make dotfiles'
-			echo 'make dotfiles'
-		stage 'test dotfiles'
-			echo 'test dotfiles'
+			echo 'docker run the debian jessie box. i guess?"
+		stage 'make world'
+			echo 'make world'
+		stage 'test world'
+			echo 'test world'
 			echo 'serverspec for dotfiles lul'
 		stage 'cleanup'
 			echo 'just shut off the docker containers'
