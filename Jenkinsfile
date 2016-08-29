@@ -17,7 +17,7 @@ node('iac'){
 		stage 'checkout'
 			checkout scm
 		stage 'bootstrap'
-			echo 'docker run the centos 6 box'
+			echo 'docker run the ...well, there\'s no osx container...'
 		stage 'make dotfiles'
 			echo 'make dotfiles'
 		stage 'test dotfiles'
