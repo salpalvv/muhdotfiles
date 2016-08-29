@@ -50,11 +50,18 @@ htop
 sudo vi /etc/apt/sources.list
 sudo vi /etc/network/interfaces
 sudo apt-get update
-sudo apt-get install git vim tmux xserver-xorg-video-radeon libdrm-radeon1 firmware-realtek
+sudo apt-get install git vim tmux ag fzf rsync htop
+sudo apt-get install xserver-xorg-video-radeon libdrm-radeon1 firmware-realtek
 sudo apt-get install i3 suckless-tools
 git clone https://github.com/freedomben/rtl8188cd-linux-driver.git
 git clone https://github.com/salpalvv/muhdotfiles.git
 
 #work
-install git vim tmux ag fzf
-install ansible docker virtualbox vagrant
+yum install -y git vim tmux ag fzf rsync htop
+yum install -y ansible docker virtualbox vagrant
+
+#pistack
+fail2ban
+change password
+raspi-config
+add ssh key
