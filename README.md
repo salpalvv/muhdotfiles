@@ -3,4 +3,4 @@ The goal is to keep it relatively simple, sensible, and easy to follow without l
 
 You still shouldn't just copy-paste this unless you know what functionality it is you are getting.
 
-utilities like fzf, ag, tmux, vim, will be brought down and built from src
+utilities like fzf, ag, tmux, vim, will be brought down and built from src...eventually  
