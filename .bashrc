@@ -6,6 +6,6 @@ done;
 unset SSH_ASKPASS
 
 set -o vi
-
+setxkbmap -option ctrl:nocaps
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
