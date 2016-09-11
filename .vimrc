@@ -133,10 +133,10 @@ nnoremap <leader>W :Gwrite<CR><CR>
 nnoremap <leader>F :Ggrep<Space>
 nnoremap <leader>MV :Gmove<Space>
 
-" solarized
+" gruvbox
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 " Ag
 nnoremap <leader>a :Ag<Space>
@@ -180,7 +180,7 @@ let g:syntastic_check_on_wq = 0
 
 " airline
 set laststatus=2
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 
 " vim-ansible-yaml
 let g:ansible_options = {'ignore_blank_lines': 0}
