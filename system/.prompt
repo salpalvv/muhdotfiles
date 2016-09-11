@@ -1,9 +1,9 @@
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
 }
 
 # Set the terminal title and prompt.
-PS1="[\u@\h:";
-PS1+="\w]";
+PS1="\u@\h:";
+PS1+="\W";
 PS1+="\$(parse_git_branch)$ ";
 export PS1;
