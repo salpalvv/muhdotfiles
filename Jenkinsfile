@@ -22,7 +22,6 @@ node('iac'){
 			echo 'make world'
 		stage 'test world'
 			echo 'test world'
-			echo 'serverspec for dotfiles lul'
 		stage 'cleanup'
 			echo 'just shut off the docker containers'
 
