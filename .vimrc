@@ -133,7 +133,7 @@ nnoremap <leader>W :Gwrite<CR><CR>
 nnoremap <leader>F :Ggrep<Space>
 nnoremap <leader>MV :Gmove<Space>
 
-" solarized
+" gruvbox
 syntax enable
 set background=dark
 colorscheme gruvbox

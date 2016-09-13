@@ -59,6 +59,8 @@ git clone https://github.com/salpalvv/muhdotfiles.git
 #work
 yum install -y git vim tmux ag fzf rsync htop
 yum install -y ansible docker virtualbox vagrant
+caps2ctrl4win10.reg
+puttyTheme4win10.reg
 
 #pistack
 fail2ban

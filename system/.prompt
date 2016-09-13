@@ -3,7 +3,7 @@ parse_git_branch() {
 }
 
 # Set the terminal title and prompt.
-PS1="[\u@\h:";
-PS1+="\w]";
+PS1="\u@\h:";
+PS1+="\W";
 PS1+="\$(parse_git_branch)$ ";
 export PS1;
