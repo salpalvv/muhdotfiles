@@ -2,7 +2,7 @@
 uptime
 dmsg -T | tail
 vmstat 1
-mpstat -P All 1
+mpstat -P ALL 1
 pidstat 1
 iostat -xz 1
 free -m
