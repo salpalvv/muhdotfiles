@@ -49,6 +49,7 @@ nnoremap <down> <nop>
 nnoremap <space> <nop>
 let mapleader=" "
 nnoremap ; :
+inoremap jk <esc>
 
 " search easier
 set gdefault
