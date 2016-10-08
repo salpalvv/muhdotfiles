@@ -159,6 +159,7 @@ let g:go_list_type = "quickfix"
 let g:go_metalinter_enabled = 1
 
 au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap <leader>gd <Plug>(go-doc)
