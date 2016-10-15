@@ -49,6 +49,7 @@ nnoremap <down> <nop>
 nnoremap <space> <nop>
 let mapleader=" "
 nnoremap ; :
+inoremap jk <Esc>
 
 " search easier
 set gdefault
@@ -144,7 +145,7 @@ nnoremap <leader>a :Ag<Space>
 nnoremap <C>p :Files<CR>
 set rtp+=~/.fzf
 
-" vim-go
+" vim-go golang
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -159,6 +160,7 @@ let g:go_list_type = "quickfix"
 let g:go_metalinter_enabled = 1
 
 au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gi <Plug>(go-install)
 au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
