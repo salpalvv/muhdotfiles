@@ -67,3 +67,15 @@
 [submodule ".vim/bundle/gruvbox"]
 	path = .vim/bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "ansible/roles/ansible-role-pi"]
+	path = ansible/roles/ansible-role-pi
+	url = https://github.com/salpalvv/ansible-role-pi.git
+[submodule "ansible/roles/ansible-role-pihole"]
+	path = ansible/roles/ansible-role-pihole
+	url = https://github.com/salpalvv/ansible-role-pihole.git
+[submodule "ansible/roles/ansible-role-metrics"]
+	path = ansible/roles/ansible-role-metrics
+	url = https://github.com/salpalvv/ansible-role-metrics.git
+[submodule "ansible/roles/ansible-role-hadoop"]
+	path = ansible/roles/ansible-role-hadoop
+	url = https://github.com/salpalvv/ansible-role-hadoop.git
