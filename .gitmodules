@@ -79,3 +79,6 @@
 [submodule "ansible/roles/ansible-role-hadoop"]
 	path = ansible/roles/hadoop
 	url = https://github.com/salpalvv/ansible-role-hadoop.git
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
