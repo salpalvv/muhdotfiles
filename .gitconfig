@@ -10,3 +10,7 @@
 	pushit = push -u origin --all
 	rmrf = rm -rf
 	mv = mv -v
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
