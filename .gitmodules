@@ -46,18 +46,6 @@
 [submodule ".vim/bundle/fzf.vim"]
 	path = .vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
-[submodule "src/the_silver_searcher"]
-	path = src/the_silver_searcher
-	url = https://github.com/ggreer/the_silver_searcher
-[submodule "src/fzf"]
-	path = src/fzf
-	url = https://github.com/junegunn/fzf
-[submodule "src/tmux"]
-	path = src/tmux
-	url = https://github.com/tmux/tmux
-[submodule "src/vim"]
-	path = src/vim
-	url = https://github.com/vim/vim
 [submodule ".vim/bundle/vim-scala"]
 	path = .vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala
@@ -67,18 +55,12 @@
 [submodule ".vim/bundle/gruvbox"]
 	path = .vim/bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-[submodule "ansible/roles/ansible-role-pi"]
-	path = ansible/roles/provision
-	url = https://github.com/salpalvv/ansible-role-pi.git
-[submodule "ansible/roles/ansible-role-pihole"]
-	path = ansible/roles/pihole
-	url = https://github.com/salpalvv/ansible-role-pihole.git
-[submodule "ansible/roles/ansible-role-metrics"]
-	path = ansible/roles/metrics
-	url = https://github.com/salpalvv/ansible-role-metrics.git
-[submodule "ansible/roles/ansible-role-hadoop"]
-	path = ansible/roles/hadoop
-	url = https://github.com/salpalvv/ansible-role-hadoop.git
 [submodule ".vim/bundle/rust.vim"]
 	path = .vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git

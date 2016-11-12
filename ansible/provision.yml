@@ -1,7 +1,0 @@
----
-
-hosts: pi
-
-remote_user: pi
-
-roles: provision
