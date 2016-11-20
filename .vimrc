@@ -188,4 +188,10 @@ let g:airline_theme='gruvbox'
 let g:ansible_options = {'ignore_blank_lines': 0}
 let g:ansible_options = {'documentation_mapping': '<C-K>'}
 
+" vim-racer
+set hidden
+let g:racer_cmd = "~/.cargo/bin/racer"
+let $RUST_SRC_PATH="~/muhdotfiles/deps/rust/src/"
+let g:racer_experimental_completer = 1
+
 " }}}

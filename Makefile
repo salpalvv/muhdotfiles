@@ -52,7 +52,7 @@ clean_vim:
 
 install_git: clean_git
 	ln -sf `pwd`/.gitconfig ~/.gitconfig
-	git submodule update --init -f --recursive
+	git submodule update --init -f
 
 clean_git:
 	rm -Rf ~/.gitconfig
