@@ -4,7 +4,11 @@ export EDITOR='vim'
 
 # Go envs
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:$HOME/workspace/go/bin
+export PATH=$PATH:$HOME/workspace/go/bin/wywe
 export GOPATH=$HOME/workspace/go
+export GOBIN=$HOME/workspace/go/bin/wywe
 
 # Git envs
 
@@ -28,7 +32,7 @@ export MANPAGER="less -X" # Don’t clear the screen after quitting a manual pag
 
 export TERM='screen-256color'
 
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .svn -f -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 export PATH=$PATH:/usr/lib/scala/bin
 export PATH=$PATH:/usr/share/apache-maven/bin
@@ -37,3 +41,10 @@ export JAVA_HOME=/usr
 export PATH=$PATH:~/protoc/bin
 export PATH=$PATH:~/node/bin
 export PATH=$PATH:/usr/local/bin
+
+# for rust
+export OPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include
+export DEP_OPENSSL_INCLUDE=/usr/local/opt/openssl/include
+export OPENSSL_LIB_DIR=/usr/local/opt/openssl/lib
+export LIBRARY_PATH=/usr/local/lib
+export RUST_SRC_PATH=$HOME/muhdotfiles/deps/rust/src

@@ -2,3 +2,4 @@ navi-*
 .tmux/resurrect
 *.swp
 *.netrwhist
+.secrets

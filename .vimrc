@@ -144,7 +144,7 @@ nnoremap <leader>a :Ag<Space>
 nnoremap <C>p :Files<CR>
 set rtp+=~/.fzf
 
-" vim-go
+" vim-go golang
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -159,6 +159,8 @@ let g:go_list_type = "quickfix"
 let g:go_metalinter_enabled = 1
 
 au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gi <Plug>(go-install)
+au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap <leader>gd <Plug>(go-doc)
@@ -184,5 +186,11 @@ let g:airline_theme='gruvbox'
 " vim-ansible-yaml
 let g:ansible_options = {'ignore_blank_lines': 0}
 let g:ansible_options = {'documentation_mapping': '<C-K>'}
+
+" vim-racer
+set hidden
+let g:racer_cmd = "~/.cargo/bin/racer"
+let $RUST_SRC_PATH="~/muhdotfiles/deps/rust/src/"
+let g:racer_experimental_completer = 1
 
 " }}}

@@ -1,4 +1,4 @@
-for file in ~/muhdotfiles/system/.{prompt,inputrc,aliases,functions,git-completion.bash}; do
+for file in ~/muhdotfiles/system/.{prompt,inputrc,aliases,functions,git-completion.bash,secrets}; do
 [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
