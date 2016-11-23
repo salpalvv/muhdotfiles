@@ -5,6 +5,7 @@ alias g="git"
 alias v='vim $(fzf)'
 alias agh='ag --hidden'
 alias rr="rm -rf"
+alias c="clear"
 
 # dir listing/traversal
 alias l="ls -lhAp"
