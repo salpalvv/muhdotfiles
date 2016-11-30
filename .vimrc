@@ -189,8 +189,7 @@ nnoremap <leader>cB <plug>NERDCommenterAlignBoth
 nnoremap <leader>cb :CargoBuild<CR>
 nnoremap <leader>cr :CargoRun<CR>
 nnoremap <leader>ct :CargoTest<CR>
-
-let g:rustfmt_autosave = 1
+"let g:rustfmt_autosave = 1
 
 " vim-racer
 set hidden
