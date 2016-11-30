@@ -182,6 +182,16 @@ let g:airline_theme='gruvbox'
 let g:ansible_options = {'ignore_blank_lines': 0}
 let g:ansible_options = {'documentation_mapping': '<C-K>'}
 
+" NERD Commenter
+nnoremap <leader>cB <plug>NERDCommenterAlignBoth
+
+" vim-rust
+nnoremap <leader>cb :CargoBuild<CR>
+nnoremap <leader>cr :CargoRun<CR>
+nnoremap <leader>ct :CargoTest<CR>
+
+let g:rustfmt_autosave = 1
+
 " vim-racer
 set hidden
 let g:racer_cmd = "~/.cargo/bin/racer"

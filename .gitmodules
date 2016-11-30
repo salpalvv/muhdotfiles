@@ -74,3 +74,6 @@
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule ".vim/bundle/vim-cargo"]
+	path = .vim/bundle/vim-cargo
+	url = https://github.com/timonv/vim-cargo.git
