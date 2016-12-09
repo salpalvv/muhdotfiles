@@ -77,3 +77,6 @@
 [submodule ".vim/bundle/vim-cargo"]
 	path = .vim/bundle/vim-cargo
 	url = https://github.com/timonv/vim-cargo.git
+[submodule ".vim/bundle/vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
