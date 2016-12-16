@@ -80,3 +80,6 @@
 [submodule ".vim/bundle/vim-ruby"]
 	path = .vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/bundle/vim-toml"]
+	path = .vim/bundle/vim-toml
+	url = https://github.com/cespare/vim-toml.git
