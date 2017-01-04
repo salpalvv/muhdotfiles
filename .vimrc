@@ -103,6 +103,14 @@ au BufNewFile,BufRead *.py
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+" macros
+" error-chain rust crate
+let @c = "o.chain_err(|| \"jkA?;jkb"
+" unwraps for rust
+let @u = "o.unwrap();jk"
+" creates test module in rust
+let @t =
+	\ "o#[cfg(testjkomod tests {use super::*;#[testjkofn test() {assert!(falsejkA;jk"
 " }}}
 
 " Plugins {{{
