@@ -16,11 +16,11 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
-" use two spaces for indentation
+" use 4 spaces for indentation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set smarttab
 set autoindent
 set smartindent

@@ -86,3 +86,6 @@
 [submodule ".vim/bundle/vim-capnp"]
 	path = .vim/bundle/vim-capnp
 	url = https://github.com/peter-edge/vim-capnp.git
+[submodule ".vim/bundle/c.vim"]
+	path = .vim/bundle/c.vim
+	url = https://github.com/vim-scripts/c.vim.git
