@@ -193,4 +193,7 @@ let g:racer_cmd = "~/.cargo/bin/racer"
 let $RUST_SRC_PATH="~/muhdotfiles/deps/rust/src/"
 let g:racer_experimental_completer = 1
 
+" rainbow parens
+autocmd FileType lisp,clojure,scheme RainbowParentheses
+
 " }}}
