@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/tslime.vim"]
 	path = .vim/bundle/tslime.vim
 	url = https://github.com/sjl/tslime.vim.git
+[submodule ".vim/bundle/tslime.vi"]
+	path = .vim/bundle/tslime.vi
+	url = https://github.com/sjl/tslime.vim.git
