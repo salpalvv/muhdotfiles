@@ -76,3 +76,6 @@
 [submodule ".vim/bundle/rainbow_parentheses.vim"]
 	path = .vim/bundle/rainbow_parentheses.vim
 	url = https://github.com/junegunn/rainbow_parentheses.vim.git
+[submodule ".vim/bundle/tslime.vim"]
+	path = .vim/bundle/tslime.vim
+	url = https://github.com/sjl/tslime.vim.git
