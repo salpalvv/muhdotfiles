@@ -23,14 +23,14 @@ help:
 	@echo 'commands to remove installed files					'
 	@echo '														'
 
-world: install_bash install_vim install_git install_tmux install_i3
+world: install_bash install_vim install_git install_tmux
 	@echo ""
 	@echo "Installing dotfiles"
 	@echo "======================="
 	@echo ""
 	@echo "done"
 
-clean: clean_bash clean_vim clean_git clean_tmux clean_i3
+clean: clean_bash clean_vim clean_git clean_tmux
 
 install_bash: clean_bash
 	ln -sf `pwd`/.bashrc ~/.bashrc
