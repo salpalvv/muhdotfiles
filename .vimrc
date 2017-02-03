@@ -101,8 +101,8 @@ au BufNewFile,BufRead *.py
 \ set autoindent |
 \ set fileformat=unix |
 
-" xml indentation
-au BufNewFile,BufRead *.xml
+" xml and coffeescript indentation
+au BufNewFile,BufRead *.xml,*.coffee
 \ set tabstop=2 |
 \ set softtabstop=2 |
 \ set shiftwidth=2 |
