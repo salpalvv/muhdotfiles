@@ -82,3 +82,9 @@
 [submodule ".vim/bundle/tslime.vi"]
 	path = .vim/bundle/tslime.vi
 	url = https://github.com/sjl/tslime.vim.git
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule ".vim/bundle/vim-coffee-script"]
+	path = .vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
