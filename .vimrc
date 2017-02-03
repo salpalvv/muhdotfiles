@@ -101,6 +101,15 @@ au BufNewFile,BufRead *.py
 \ set autoindent |
 \ set fileformat=unix |
 
+" xml indentation
+au BufNewFile,BufRead *.xml
+\ set tabstop=2 |
+\ set softtabstop=2 |
+\ set shiftwidth=2 |
+\ set expandtab |
+\ set autoindent |
+\ set fileformat=unix |
+
 " flag bad whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
