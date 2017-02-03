@@ -202,4 +202,12 @@ let g:racer_cmd = "~/.cargo/bin/racer"
 let $RUST_SRC_PATH="~/muhdotfiles/deps/rust/src/"
 let g:racer_experimental_completer = 1
 
+" rainbow parens
+autocmd FileType lisp,clojure,scheme RainbowParentheses
+
+let g:tslime_ensure_trailing_newlines = 1
+let g:tslime_normal_mapping = '<leader>t'
+let g:tslime_visual_mapping = '<leader>t'
+let g:tslime_vars_mapping = '<leader>T'
+
 " }}}

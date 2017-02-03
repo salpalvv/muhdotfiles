@@ -41,6 +41,7 @@ export JAVA_HOME=/usr
 export PATH=$PATH:~/protoc/bin
 export PATH=$PATH:~/node/bin
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:~/.npm-global/bin
 
 # for rust
 export OPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include
