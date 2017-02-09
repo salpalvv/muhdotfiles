@@ -16,6 +16,7 @@ help:
 	@echo '	make world          install everything				'
 	@echo '	make install_bash   install bash_profile			'
 	@echo '	make install_vim    install vim configuration		'
+	@echo '	make install_nvim   install nvim configuration		'
 	@echo '	make install_git    install git configuration		'
 	@echo '	make install_tmux   install tmux configuration		'
 	@echo '														'
@@ -23,14 +24,14 @@ help:
 	@echo 'commands to remove installed files					'
 	@echo '														'
 
-world: install_bash install_vim install_git install_tmux install_i3
+world: install_bash install_vim install_nvim install_git install_tmux
 	@echo ""
 	@echo "Installing dotfiles"
 	@echo "======================="
 	@echo ""
 	@echo "done"
 
-clean: clean_bash clean_vim clean_git clean_tmux clean_i3
+clean: clean_bash clean_vim clean_nvim clean_git clean_tmux
 
 install_bash: clean_bash
 	ln -sf `pwd`/.bashrc ~/.bashrc
@@ -50,6 +51,14 @@ clean_vim:
 	rm -Rf ~/.vimrc
 	rm -Rf ~/.vim
 
+install_nvim: clean_nvim
+	ln -sf `pwd`/.vim/ ~/.config/nvim
+	ln -sf `pwd`/.vimrc ~/.config/nvim/init.vim
+
+clean_nvim:
+	rm -Rf ~/.config/nvim
+	rm -Rf ~/.config/init.vim
+
 install_git: clean_git
 	ln -sf `pwd`/.gitconfig ~/.gitconfig
 	git submodule update --init -f
@@ -68,5 +77,6 @@ clean_tmux:
 .PHONY: help world clean \
 	install_bash clean_bash \
 	install_vim clean_vim \
+	install_nvim clean_nvim \
 	install_git clean_git \
 	install_tmux clean_tmux
