@@ -16,11 +16,11 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
-" use two spaces for indentation
+" use 4 spaces for indentation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set smarttab
 set autoindent
 set smartindent
@@ -120,6 +120,14 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w11 w !sudo tee > /dev/null %
 
+" macros
+" error-chain rust crate
+let @c = "o.chain_err(|| \"jkA?;jkb"
+" unwraps for rust
+let @u = "o.unwrap();jk"
+" creates test module in rust
+let @t =
+	\ "o#[cfg(testjkomod tests {use super::*;#[testjkofn test() {assert!(falsejkA;jk"
 " }}}
 
 " Plugins {{{
@@ -198,6 +206,15 @@ let g:airline_theme='gruvbox'
 " vim-ansible-yaml
 let g:ansible_options = {'ignore_blank_lines': 0}
 let g:ansible_options = {'documentation_mapping': '<C-K>'}
+
+" NERD Commenter
+nnoremap <leader>cB <plug>NERDCommenterAlignBoth
+
+" vim-rust
+nnoremap <leader>cb :CargoBuild<CR>
+nnoremap <leader>cr :CargoRun<CR>
+nnoremap <leader>ct :CargoTest<CR>
+let g:rustfmt_autosave = 0
 
 " vim-racer
 set hidden

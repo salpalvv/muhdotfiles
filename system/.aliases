@@ -2,7 +2,7 @@
 
 alias _="sudo"
 alias g="git"
-alias v='vim $(fzf)'
+alias v='nvim $(fzf)'
 alias agh='ag --hidden'
 alias rr="rm -rf"
 alias c="clear"
