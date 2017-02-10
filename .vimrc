@@ -31,6 +31,9 @@ set autoread
 set relativenumber
 set number
 
+" yanktoggle
+nnoremap + :set number! relativenumber!<CR>:GitGutterToggle<CR>
+
 " Get rid of those enticing arrow keys
 vnoremap <right> <nop>
 vnoremap <left> <nop>
