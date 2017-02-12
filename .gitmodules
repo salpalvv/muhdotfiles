@@ -89,3 +89,6 @@
 [submodule ".vim/bundle/c.vim"]
 	path = .vim/bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule ".vim/bundle/vim-gluon"]
+	path = .vim/bundle/vim-gluon
+	url = https://github.com/salpalvv/vim-gluon.git
