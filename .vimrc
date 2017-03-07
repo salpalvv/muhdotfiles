@@ -8,6 +8,7 @@ set nobackup
 set noswapfile
 set visualbell
 set noerrorbells
+set mouse-=a
 
 set encoding=utf-8
 
