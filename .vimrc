@@ -144,9 +144,6 @@ syntax enable
 set background=dark
 colorscheme gruvbox
 
-" Ag
-nnoremap <leader>a :Ag<Space>
-
 " fzf
 nnoremap <C>p :Files<CR>
 set rtp+=~/.fzf
@@ -208,5 +205,8 @@ set hidden
 let g:racer_cmd = "~/.cargo/bin/racer"
 let $RUST_SRC_PATH="~/muhdotfiles/deps/rust/src/"
 let g:racer_experimental_completer = 1
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " }}}

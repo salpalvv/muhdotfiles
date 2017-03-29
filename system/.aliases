@@ -2,8 +2,8 @@
 
 alias _="sudo"
 alias g="git"
-alias v='nvim $(fzf)'
-alias agh='ag --hidden'
+alias v='nvim -b $(fzf)'
+alias rgh='rg --hidden'
 alias rr="rm -rf"
 alias c="clear"
 
