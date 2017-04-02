@@ -85,6 +85,9 @@ nnoremap <leader>l <C-W><C-L>
 " remove whitespace
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
+" crlf to lf
+nnoremap <leader>f :e ++ff=dos<CR>
+
 " enable folding
 set foldmethod=manual
 autocmd BufRead * setlocal foldmethod=marker
