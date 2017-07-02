@@ -44,4 +44,4 @@ export OPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include
 export DEP_OPENSSL_INCLUDE=/usr/local/opt/openssl/include
 export OPENSSL_LIB_DIR=/usr/local/opt/openssl/lib
 export LIBRARY_PATH=/usr/local/lib
-export RUST_SRC_PATH=$HOME/muhdotfiles/deps/rust/src
+export PATH=$PATH:~/.cargo/bin

@@ -1,1 +1,1 @@
-/Users/danielcollette/muhdotfiles/.vimrc
+/home/dcollette/muhdotfiles/.vimrc
