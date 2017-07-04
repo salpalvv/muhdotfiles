@@ -110,6 +110,9 @@ au BufNewFile,BufRead *.py
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+" Allow saving of files as sudo 
+cmap w11 w !sudo tee > /dev/null %
+
 " macros
 " error-chain rust crate
 let @c = "o.chain_err(|| \"jkA?;jkb"
@@ -149,7 +152,7 @@ colorscheme gruvbox
 
 " fzf
 nnoremap <c-p> :Files<CR>
-set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(

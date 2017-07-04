@@ -8,7 +8,7 @@ alias rr="rm -rf"
 alias c="clear"
 
 # dir listing/traversal
-alias l="ls -lhAp"
+alias l="ls -lhAp --color=always"
 alias ll="ls -lA"
 alias lt="ls -lhAtr"
 alias ld="ls -ld */"

@@ -1,4 +1,4 @@
-for file in ~/muhdotfiles/system/.{prompt,inputrc,aliases,functions,git-completion.bash,secrets}; do
+for file in ~/muhdotfiles/system/.{exports,prompt,inputrc,aliases,functions,git-completion.bash,secrets}; do
 [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
@@ -9,3 +9,4 @@ set -o vi
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+setxkbmap -layout us -option ctrl:nocaps

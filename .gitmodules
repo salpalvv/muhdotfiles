@@ -97,3 +97,6 @@
 [submodule ".vim/bundle/deoplete-omnisharp"]
 	path = .vim/bundle/deoplete-omnisharp
 	url = https://gitlab.com/mixedCase/deoplete-omnisharp.git
+[submodule ".i3/bumblebee-status"]
+	path = .i3/bumblebee-status
+	url = https://github.com/tobi-wan-kenobi/bumblebee-status.git

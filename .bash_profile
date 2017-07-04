@@ -1,9 +1,12 @@
-if [ -f ~/.profile ]; then . ~/.profile; fi
-if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+for file in ~/muhdotfiles/system/.{exports,prompt,inputrc,aliases,functions,git-completion.bash,secrets}; do
+[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
 
-# source ~/.zshrc
+# add bash specific exports here
+unset SSH_ASKPASS
 
+set -o vi
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 setxkbmap -layout us -option ctrl:nocaps
-
-#don't add anything after this
-#if [[ $( which startx ) ]]; then exec startx; fi

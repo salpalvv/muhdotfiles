@@ -1,0 +1,6 @@
+sudo apt install neovim python-pip python3-pip fonts-hack-ttf gcc make git tlp bumblebee rxvt-unicode i3 xbacklight
+
+pip3 install neovim
+pip install neovim
+
+#sudo apt install blender
