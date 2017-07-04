@@ -29,8 +29,7 @@ export LANG="en_US"
 
 export MANPAGER="less -X" # Don’t clear the screen after quitting a manual page
 
-export TERM='xterm-color'
-export TERMINAL='xterm-color'
+export TERM='rxvt-unicode-256color'
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
